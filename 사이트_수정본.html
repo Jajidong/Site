@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<title>전단지 소개페이지 – 네온 스타일</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<style>
+  /* Reset & basic styling */
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at top left, #19002e 0%, #000814 70%);
+    font-family: 'Arial', sans-serif;
+    color: #f1f1f1;
+    padding: 20px;
+  }
+
+  /* Card container */
+  .card {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    padding: 40px 30px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.25);
+    animation: pop 0.8s ease-out;
+  }
+
+  /* Hero heading */
+  h1 {
+    font-size: 1.9rem;
+    text-align: center;
+    margin-bottom: 25px;
+    background: linear-gradient(90deg, #ff0066, #ffcc00 60%);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  /* List styling */
+  ul {
+    list-style: none;
+    font-size: 1.15rem;
+    line-height: 1.7;
+  }
+  li {
+    position: relative;
+    padding-left: 34px;
+    margin-bottom: 18px;
+    opacity: 0;
+    animation: fadeInUp 0.8s forwards;
+  }
+  li:nth-child(1) { animation-delay: 0.2s; }
+  li:nth-child(2) { animation-delay: 0.4s; }
+  li:nth-child(3) { animation-delay: 0.6s; }
+  li:nth-child(4) { animation-delay: 0.8s; }
+
+  /* Custom bullet icon */
+  li::before {
+    content: '🔥';
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.2em;
+    animation: spin 4s linear infinite;
+  }
+
+  /* CTA button */
+  .cta {
+    display: block;
+    margin: 35px auto 0;
+    padding: 14px 30px;
+    font-size: 1.1rem;
+    background: #ff0066;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 0 12px #ff0066;
+    animation: pulse 2.5s ease-in-out infinite;
+    transition: transform 0.15s;
+  }
+  .cta:active { transform: scale(0.95); }
+
+  /* Animations */
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes spin {
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 0 12px #ff0066; }
+    50%      { box-shadow: 0 0 24px #ff0066; }
+  }
+  @keyframes pop {
+    0%   { transform: scale(0.5); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+
+  /* Responsiveness */
+  @media (max-width: 480px) {
+    h1 { font-size: 1.6rem; }
+    li { font-size: 1rem; }
+    .cta { font-size: 1rem; padding: 12px 24px; }
+  }
+</style>
+</head>
+<body>
+<div class="card">
+<h1>🎯 최고의 조건으로 안내드립니다!</h1>
+<ul>
+<li>공배팅 전혀 없음</li>
+<li>지금 받으시는 조건보다 <strong>더 좋게</strong> 맞춰드립니다</li>
+<li>양방 제외, <strong>무제제</strong></li>
+<li>벤더사 <strong>아레스 (ARES)</strong> 사용</li>
+</ul>
+<a class="cta" href="https://t.me/king_of_chamway">💬 텔레그램으로 문의하기</a>
+</div>
+</body>
+</html>
